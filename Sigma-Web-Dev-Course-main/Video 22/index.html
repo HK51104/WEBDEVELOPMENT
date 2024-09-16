@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 
+        it ensures that all elements start with no margin or padding, giving you full control over the spacing without having to override each element's default styles.
+        */
+
+        html{
+            font-size: 22px;
+        }
+
+        .box {
+            box-sizing: border-box;
+            /* 
+            With "box-sizing: border-box", the width and height of an element include its content, padding, and borders, meaning:
+            */
+            border: 2px  solid
+            rebeccapurple;
+            /* 
+            it is better to mention border type here than to add another attribute "border style"
+            */
+            /* 
+            If you omit the solid (or any other valid border-style like dashed, dotted, etc.), the border style defaults to none. A border with none as the style means no border will be rendered, even if you specify a color and width.
+            */
+            /* width: 2048px; */
+            width: 80vw;
+            /*
+             vw stands for viewport width. 
+             */
+             /* 
+             a viewport is the part of a web page that is currently visible on the screen
+             */
+             /* 
+             80vw means the element's width will be 80% of the viewport's total width.
+             */
+             /* 
+             If the viewport (i.e., the browser window) is 1000 pixels wide, then 80vw would result in an element with a width of 800 pixels.
+             */
+             /* 
+             vw is useful for creating fluid layouts that adapt to different screen sizes without needing media queries.
+             */
+            height: 10vh;
+            margin: auto;
+            /*
+            in case of block level element(not inline element) 
+            "margin : auto" tends to give equal margin from both sides
+            thus ultimately centering the box level element
+            */
+            background-color: red;
+        }
+
+        .container {
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 2048px; */
+            width: 80vw;
+            /* height: 80vh; */
+            min-height: 80vh;
+            margin: 23px auto;
+            font-size: 18px;
+            background-color: aquamarine;
+        }
+        .container > div
+        /* "container" ka "div" */
+        {
+            font-size: 2em; 
+            /* 
+            "em" is a relative unit in CSS. It is relative to the font size of the "parent element"
+            */
+            /* 
+            1em is equal to the font size of the parent element. So, 2em means twice the font size of the parent element.
+            */
+            /* 
+             Using em allows for flexible and scalable designs. If the parent font size changes, the child elements that use em will automatically adjust relative to the parent's size.
+            */
+            border: 2px solid red;
+            width: 50%;
+            /* 
+            In CSS, "width: 50%" sets the width of an element to 50% of the width of its parent element.
+            */
+            /* 
+            If no parent width is defined, the width will be relative to the closest ancestor with a defined width.
+            */
+        }
+
+        .container > div > div{
+            border: 2px solid blue;
+            width: 50%;
+        }
+
+        .mycont{ 
+            border: 2px solid black;
+            box-sizing: border-box;
+            margin: 23px auto;
+            color: rgb(0, 0, 0);
+            font-size: 22px;
+            /* width: 100vmin; */
+            /* 
+            When you set width: "100vmin;", the width of the element will be 100% of the smaller of the two viewport dimensions (either width or height).
+            */
+            width: 80vw;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units -->
+    <div class="box">
+        This is a box
+    </div>
+
+    <div class="container">
+        <!-- 
+        the parent element is the outermost <div class="container">
+         -->
+            HI
+        <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus quia quod iste dolorem
+            voluptatem fuga quidem aspernatur. Nihil ipsa sint quae, beatae explicabo saepe impedit laboriosam magni
+            cupiditate expedita voluptates consequatur odit veritatis dolorum doloribus. Iure nemo odit dicta, delectus,
+            modi reiciendis maiores ut quo adipisci libero quam laboriosam nihil voluptate natus nobis earum ad?
+        
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero omnis voluptas est aliquam, dolores rem laudantium nulla maiores odio fugit, totam voluptatem saepe!
+        </div>
+    </div>
+
+        <!-- Expand this to see that this container will adjust its height lorem999 -->
+    </div>
+
+    <div class="mycont">
+        I am another container
+    </div>
+</body>
+
+</html>

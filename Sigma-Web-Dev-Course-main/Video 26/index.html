@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .box {
+            width: 30vw;
+            height: 30vh;
+            border: 2px solid black;
+            /* overflow: auto;
+            /* 
+            if the content will "overflow outside the box" then we will see a "scroll bar" automatically but if it doesnt overflow then there won't be any "scroll bar" 
+            */
+            /* 
+            whereas "overflow: scroll" will always have the scroll bar 
+            */
+            overflow-x: hidden;
+            overflow-y: scroll; 
+            /* 
+            the above 2 statements can also be written as
+            */
+            /*overflow:hidden scroll;*/
+            /* 
+            the baove 2 sattements van also be written as 
+            */
+            /* overflow:clip; */
+            /*
+            the content will be visible till the last letter without scrolling and after that we wont be able to scroll as we used "clip"
+            */
+
+
+            /* white-space: nowrap;*/
+            /* 
+            The CSS property "white-space: nowrap;" is used to prevent text from wrapping to the next line. Instead, all the content in the element stays on a single line, no matter how long it is.
+            */
+            /*text-overflow:ellipsis;*/
+            /* 
+            it brings "......" at the end to the wrapped text done using "white-space: nowrap" 
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        I am a good boy and I love to write Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta iure amet
+        unde voluptas nihil vero, maxime esse quis quos natus rem, earum aspernatur quasi aut ea commodi nostrum
+        voluptate! Sint rerum nostrum perferendis sapiente explicabo perspiciatis, ut magni? Aspernatur, provident
+        dolorum unde corporis doloribus rem! uiefwabiferiwhfiurehhfurheuvcwnehchgehctchrdhcthyefcntrdhfchdhrhnchrdgtdhcgtr8co8tdn8rg87rnh8xgtr8dr8ugysemshdowsrugcpsdrhcgst98dhsrtmhcgtsr
+    </div>
+</body>
+
+</html>

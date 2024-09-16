@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 2px solid black;
+            padding: 34px;
+            box-shadow: 5px 15px 10px #00ff22;
+            /*
+             The box-shadow property in CSS adds shadow effects to elements. 
+            */
+            /* 
+            Horizontal Offset (5px):
+            This value specifies how far the shadow is shifted horizontally from the element.
+            A positive value moves the shadow to the right of the element, while a negative value would move it to the left.
+            */
+            /* 
+            Vertical Offset (15px):
+            This value determines how far the shadow is shifted vertically from the element.
+            A positive value moves the shadow down from the element, while a negative value would move it up.
+            */
+            /* 
+            Blur Radius (10px):
+            This value defines the amount of blur applied to the shadow.
+            A higher value creates a more blurred shadow, while a value of 0 would result in a sharp, hard-edged shadow.
+            */
+            /* 
+            The div will have a green shadow that is offset 5 pixels to the right and 15 pixels down from the box.
+            */
+            /* 
+            Inset: Adding inset before the offsets will make the shadow appear inside the element rather than outside. 
+            */
+        }
+
+        .text-element {
+            outline: 2px solid blue ;
+            outline-offset:1px;
+            /*
+             The outline-offset property in CSS controls the distance between an element's outline and its border edge.
+             */
+             /* 
+             If no outline-offset is specified, the outline is drawn directly on the border edge.
+             */
+             border-radius: 10px;
+             /* 
+             Applying border-radius: 10px; to an element creates rounded corners with a radius of 10px. This applies uniformly to all four corners:
+             */
+             /* 
+             the "outline" follows the "border"
+             so if the border is rounded then the outline will also be rounded
+             */
+             text-shadow: 10px 5px 3px #e695f7
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        I am a box
+    </div>
+
+    <p class="text-element">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, atque. Modi voluptatibus necessitatibus
+        architecto quidem sit maiores, ad nesciunt et odit esse. Possimus, ipsam et molestiae eius quae nisi quisquam
+        maiores fugiat aut fuga!
+    </p>
+
+</body>
+
+</html>

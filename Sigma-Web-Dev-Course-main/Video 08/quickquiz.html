@@ -1,0 +1,34 @@
+ <!--
+    Quick Quiz:
+    Without using br tag, write a vertically aligned form asking for name, city and pincode of a user.
+    Everyone must comment
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="post">
+        <!--
+         as such "form" hatane ya daalne se website ki "UI" par koi difference nahi aayega but "form" keyword use karne se it enables users to submit data, which can be processed, stored, or returned by a server.
+        -->
+        <div>
+            <label for="name">enter your name</label>
+            <!-- id->"name" -->
+            <!-- the information written on the website will be "enter your name" -->
+            <input type="text" id="name" name="name" placeholder="Enter your name" >
+            <!-- in the box the text which will be acting as a placeholder will be "Enter your name" -->
+        </div>
+        
+        <div>
+            <label for="city">enter your city name</label>
+            <input type="text" id="city" name="name" placeholder="Enter your city name" >
+        </div>
+    </form>
+</body>
+</html>
