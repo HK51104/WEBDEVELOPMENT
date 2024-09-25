@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+   
+}
+
+body {
+    background-color: rgb(186, 182, 182);   
+    
+    width: 500px;
+    height: 600px;
+    margin: 5px 25px 5px 500px ;
+}
+
+.main {
+    background-color: white;
+    border: 2px solid black;
+    margin: 5px;
+    border-radius: 10px;
+    height: 500px;
+    width: 400px;
+}
+.image
+{
+    margin: 5px;
+    
+    padding: 0px 0px 0px 5px;
+    height: 450px;
+}
+.image img {
+  
+    border-radius: 20px;
+    /* border: 12px solid green; */
+    margin: 3px 5px 0px 35px ;
+    width: 300px;
+    height: auto;
+}
+
+.span
+{
+   
+    padding: 5px 0px 0px 30px;
+    
+}
+.Nature {
+    border: 2px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    color: rgb(100, 97, 97);
+    margin-top: 0px 0px 0px 500px ;
+}
+
+.Lake {
+    border: 2px solid rgb(229, 227, 227);
+    border-radius: 10px;
+    color: rgb(100, 97, 97);
+    margin-left:5px ;
+}
+
+.content {
+
+   
+    padding: 30px 0px 0px 25px;
+    color: gray;
+    
+}
+
+.content>h2
+{
+    color: black;
+}
+.capsule
+{
+    text-align: center;
+    border: 2px solid blue;
+    border-radius: 20px;
+    width: 100px;
+    margin: 25px 0px 0px 130px;
+    color: blue ;
+    background-color: rgb(118, 200, 255);
+    padding: 5px ;
+}

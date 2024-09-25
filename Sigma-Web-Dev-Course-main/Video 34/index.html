@@ -8,19 +8,24 @@
         .cards{
             border: 2px solid black;
             display: flow-root;
+            /* "element's children" are contained within the "element's boundaries" */
         }
         
         img{
             float:left;
+            /* "image" will float at left and allow the other content at "right side" */
         }
 
         .card{
             border: 2px solid red;
         }
 
-        .card:nth-child(3){
+        .card:nth-child(3)
+        /* "card" ka "3rd child" par yeh properties lagegi*/
+        {
             background-color: aqua;
             clear:both;
+            /* "Content" jahan hoga vo toh hoga hi but both the sides will be cleared i.e left and right */
         }
     </style>
 </head>
