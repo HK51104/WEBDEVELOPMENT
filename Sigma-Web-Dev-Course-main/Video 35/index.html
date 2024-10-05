@@ -6,41 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>More on CSS Selectors</title>
     <style>
-        /* .box:first-child{
+        .box:first-child{
             background-color: red;
-        } */
+        }
 
-        /* .box::first-line{
+        .box::first-line{
             color: yellow;
-        } */
+        }
 
-        /* .boxes *{
+         .boxes *{
             color: blue;
             border: 2px solid black;
         }
-
         p, a, .box, [data-color="primary"]{
             padding-top: 45px;
-        } */
-
-        /* .box:nth-child(odd){
-            background-color: blue;
-        } */
-
-        /* .box:nth-last-child(2){
-            background-color: red;
-        } */
-
+            } 
+            
+             .box:nth-child(odd){
+                background-color: blue;
+                } 
+                
+                 .box:nth-last-child(2){
+                    background-color: red;
+                    } 
+                    /*
+                     The reason .box:nth-last-child(1) might not be working as expected is likely due to the fact that :nth-last-child works on all child elements regardless of their class, not just elements with the class box. So, if the last child of the .boxes container is not a .box, the selector won’t apply.
+                     */
+                     /* 
+                    The last child of .boxes is an <input> element, not a .box. So the nth-last-child(1) will target that <input>, not any .box.
+                     */
+                     /* 
+                     If you want to target the last .box element specifically, you should use the :nth-last-of-type pseudo-class instead, which targets elements based on their type and position among siblings of the same type.
+                     */
+                    
         .boxes::before {
             content: "Harry is good";
             color: blue;
         }
+/*
+we can insert element dynamically using "before" and "after"
+*/
+/* 
+they re psuedo elements
+*/
 
         .boxes::after {
             content: "Sigma course is also good";
             color: red;
         }
-
+        /* on selected members  */
         ::selection {
             background-color: black;
             color: aqua;
@@ -60,6 +74,7 @@
 <body>
     <div class="boxes">
         <div data-color="primary" class="box">I am first box</div>
+        <!-- "data-color" here is a custom data    -->
         <div class="box">Hey I am a box</div>
         <div class="box">Hey I am a box</div>
         <input type="text" placeholder="Type your name here">
