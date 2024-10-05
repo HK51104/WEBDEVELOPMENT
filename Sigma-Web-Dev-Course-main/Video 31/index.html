@@ -10,39 +10,59 @@
             background-color: red;
         }
 
+        /*
+         BASIC SYNTAX: 
+         @media not|only mediatype and (expressions)
+          {
+            CSS-Code;
+          } 
+        */
+/*
+ "media" is written to write a "media query"
+ The term query generally means a request for information 
+ "only" refers to the situaion where in we want our media to display only when particular situation is at play 
+ (example: when media is being viewed at screen (not while previewing for printout))
+
+ the "and" keyword is used to combine multiple conditions or expressions, ensuring that the styles are applied only when all conditions are true.
+*/
         @media screen and (orientation: portrait) {
-            body{
+            body {
                 border: 2px solid purple;
             }
         }
-
-        @media only screen and (max-width: 455px){
-            body{
+/* 
+"portrait" means when height is more than width
+and
+"landscape" meanse when width is more than height 
+ */
+        @media only screen and (max-width: 455px)
+        /*
+         jaise hi "max width 455px" hogyi then neeche likhi huyi properties use hogi
+         */
+            {
+            body {
 
                 background-color: blue;
             }
-            
-            .boxes{
+
+            .boxes {
                 flex-direction: column;
             }
         }
-        
-        /* @media not|only mediatype and (expressions) {
-            CSS-Code;
-        } */
 
-        .boxes{
+
+
+        .boxes {
             display: flex;
         }
 
-        .box{
+        .box {
             width: 344px;
             height: 344px;
             background-color: steelblue;
             padding: 3px;
             margin: 3px;
         }
-
     </style>
 </head>
 
