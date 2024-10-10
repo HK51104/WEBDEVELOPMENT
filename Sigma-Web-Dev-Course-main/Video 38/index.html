@@ -4,77 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Flexbox</title>
+    <title>CSS MultiColor Website</title>
     <style>
-        .container {
-            border: 2px solid red;
-            display: flex;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    </style>
+    <style>
+
+        /* :root{
+            --primary-color: #ad5afacc;
+            --text-color: white;
+            --secondary-color: #e3cff5cc;
+        } */
+
+        :root{
+            --primary-color: #061872cc;
+            --text-color: white;
+            --secondary-color: #6ea5fccc;
+        }
+        
+        body{
+            background-color: var(--secondary-color);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 12px 0;
+        }
+
+        ul li{
+            list-style: none;
             /* 
-            means we can use the properties of "flexbox" 
-            default : align the objects left to right
+            In CSS, the list-style: none; property is used to remove the default bullets (or numbers) from a list. This property can be applied to both ordered (<ol>) and unordered (<ul>) lists, making the list items appear without any markers.
             */
-            height: 80vh;
-            /* justify-content: center; */
-            align-items: center;
-            /* flex-direction: column; */
-            flex-wrap: wrap;
-            /* align-content: flex-start; */
-            /* there is no justify-items  in flexbox; */
-            flex-flow: row wrap;
-            /* gap: 30px; 
-            row-gap: 40px;
-            column-gap: 10px; */
-            gap: 40px 10px;
-
+            display: inline;
+            /* 
+            The display: inline; CSS property makes an element behave like an inline element. Inline elements take up only as much width as their content requires and do not start on a new line. They also allow other inline elements to sit beside them on the same line.
+            */
+            padding: 23px;
+            font-weight: bolder;
+            
         }
 
-        .item {  
-            /* flex-grow: 1; */
-            height: 92px;
-            width: 92px;
-            border: 2px solid black;
-            /* margin: 4px; */
-            background-color: blueviolet;
-        }
-
-        .order-1{
-            order: 1;
-        }
-        .order-2{
-            order: 2;
-        }
-        .order-3{
-            order: 3;
-        }
-
-        .item1{  
-            /* flex-grow: 2; */
-            /* flex-shrink: 2; */
-            align-self: flex-end;
+        ul li a{
+            color: var(--text-color);
+            text-decoration: none;
         }
     </style>
 </head>
 
 <body>
-
-    <main>
-        <div class="container">
-            <div class="item item1">1</div>
-            <div class="item">2</div>
-            <div class="item">3</div>
-            <div class="item order-1">4</div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            
-         
-        </div>
-    </main>
-
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <!-- 
+                The <a> tag defines a hyperlink, or a link to another resource, such as a webpage. In this case, it's wrapping the text "Home" to make it clickable.
+                -->
+                <!-- 
+                The href attribute inside the <a> tag specifies the URL to which the link points.
+                -->
+                <!--
+                usually "/" is used to point to the root (home page) of the website.
+                -->
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 </body>
 
 </html>
