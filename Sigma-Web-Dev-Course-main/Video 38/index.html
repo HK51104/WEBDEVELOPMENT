@@ -4,79 +4,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS MultiColor Website</title>
+    <title>CSS Flexbox</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-    </style>
-    <style>
-
-        /* :root{
-            --primary-color: #ad5afacc;
-            --text-color: white;
-            --secondary-color: #e3cff5cc;
-        } */
-
-        :root{
-            --primary-color: #061872cc;
-            --text-color: white;
-            --secondary-color: #6ea5fccc;
-        }
-        
-        body{
-            background-color: var(--secondary-color);
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        nav {
-            background-color: var(--primary-color);
-            padding: 12px 0;
-        }
-
-        ul li{
-            list-style: none;
+        .container {
+            border: 2px solid red;
+            display: flex;
             /* 
-            In CSS, the list-style: none; property is used to remove the default bullets (or numbers) from a list. This property can be applied to both ordered (<ol>) and unordered (<ul>) lists, making the list items appear without any markers.
+            means we can use the properties of "flexbox" 
+            default : align the objects left to right
             */
-            display: inline;
+            height: 80vh;
+            /* justify-content: center; */
             /* 
-            The display: inline; CSS property makes an element behave like an inline element. Inline elements take up only as much width as their content requires and do not start on a new line. They also allow other inline elements to sit beside them on the same line.
+             horizontally(main axis) center the elements
+             */
+            align-items: center;
+            /*  
+            vertically(cross axis) center the elements
             */
-            padding: 23px;
-            font-weight: bolder;
-            
+            /* flex-direction: column; */
+            /*
+            we knew that at default the objetcs aligned left to right(row) but using "flex-direction: column;"
+            we set the default as top to bottom
+            */
+
+
+            flex-wrap: wrap;
+            /* 
+            wraps the content instead overflowing
+            */
+            /* align-content: center; */
+            /*
+            aligns number of rows to center
+            */
+
+
+            flex-flow: row wrap;
+            /* 
+            syntax : flex-flow:<flex-direction> <flex-wrap>
+            The flex-flow property is a shorthand for setting both the flex-direction and flex-wrap properties in a single line. It controls the direction and wrapping behavior of flex items within a flex container.
+            */
+            gap: 40px 10px;
+            /*  
+            row-gap: 40px;
+            column-gap: 10px; 
+            */
+
         }
 
-        ul li a{
-            color: var(--text-color);
-            text-decoration: none;
+        .item {
+            /* flex-grow: 1; */
+            height: 92px;
+            width: 92px;
+            border: 2px solid black;
+            /* margin: 4px; */
+            background-color: blueviolet;
+        }
+
+        /*
+        By default, flex items are laid out in the order they appear in the HTML source code, but the order property allows you to change this ordering without modifying the HTML. 
+        jitna zyada order utna baadme
+        jitna kam order utna pehla
+        */
+        .order-1 {
+            order: 1;
+        }
+
+        .order-2 {
+            order: 2;
+        }
+
+        .order-3 {
+            order: 3;
+        }
+
+        .item1 {
+            /* flex-grow: 2; */
+            /* 
+            default value of every item in flex-grow is "0"
+            The flex-grow property in CSS defines how much a flex item will grow relative to the other flex items in the same flex container when there is extra space available.
+            */
+            /* flex-shrink: 2; */
+            /* 
+            default value :1
+            The flex-shrink property in CSS controls how a flex item will shrink relative to the other flex items in a flex container when there isn’t enough space available.
+            */
+            align-self: flex-end;
+            /* 
+            The align-self property in CSS is used to override the align-items property for a specific flex item within a flex container. It allows you to control the alignment of that individual flex item along the cross axis.
+            sabse hatke sirf apne aap ko align karna 
+            */
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <!-- 
-                The <a> tag defines a hyperlink, or a link to another resource, such as a webpage. In this case, it's wrapping the text "Home" to make it clickable.
-                -->
-                <!-- 
-                The href attribute inside the <a> tag specifies the URL to which the link points.
-                -->
-                <!--
-                usually "/" is used to point to the root (home page) of the website.
-                -->
-                <li><a href="/">About</a></li>
-                <li><a href="/">Services</a></li>
-                <li><a href="/">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <main>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item order-1">4</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+
+
+        </div>
+    </main>
+
 </body>
 
 </html>
