@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Grid</title>
+    <title>Document</title>
     <style>
+<<<<<<< HEAD
         .container {
             width: 80vw;
             height: 100vh;
@@ -21,37 +22,86 @@
             column-gap: 44px;
             
         }
+=======
+.container
+{
+    border: 2px solid yellow;
+    display: grid;
+    /* width: 80vw; */
+    /* grid-template-columns: 1fr 1fr 1 fr */
+    /*
+    every column will get 1/3rd sapce of total(80vw)
+    */
+>>>>>>> 0b47ed504b3c592176a4399476c1d4607f9048c1
 
-        .item {
-            border: 2px solid red;
-            height: 55px;
-            width: 55px;
-        }
+    grid-template-columns: [PEHLA]120px [DOOOSRA]100px;
+    /* 
+    "PEHLA" AND "DOOSRA" are names of columns (we can also use that)
+    */
+    /* 
+    The grid-template-columns property in CSS Grid Layout is used to define the number and size of columns in a grid container. It allows you to specify the width of each column
+    */
+    grid-template-rows: 100px 100px 100px;
+    /* row-gap: 10px; */
+    /* 
+    gap between row (also present for column) 
+    Healthy practice is to use "gapping" instead of "padding"
+    */
+    /* 
+    justify-items: center;
+        align-items: center; 
+    */
+    /* 
+    the properties "justify-items" and "align-items" are used to control the alignment of grid items within their grid cells.
+    (similary,"justify-content:"
+    It aligns the entire group of items along the main axis (horizontal for rows, vertical for columns) of the container.)
+    "place-content: center;" centers both "justify-content" and "justify-items"
+    */
+    /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */ 
+   /* 
+   The "repeat()"" function allows you to specify a column configuration multiple times. In this case, it creates 4 columns.
+   The "minmax()" function defines a size range for each column:
+   100px: This is the minimum width for each column. Each column will not shrink smaller than 100 pixels.
+   1fr: This is the maximum width for each column. The fr unit stands for "fractional unit" and allows the column to grow to fill any remaining space in the grid container.
+   */
+}
+.items
+{
+    border: 2px solid red;
+    height: 55px;
+    width: 55px;
+}
+.item-4
+{
+    grid-row: 1/2;
+    /* syntax:
+     grid-row: <start-line> / <end-line>;
+     */
+    grid-column: 1/2;
+    /* same */
+}
+.item-1e
+{
+    /* align-self:center */
+    /* 
+     /* 
+    The align-self property in CSS Grid (and also in Flexbox) is used to control the alignment of a specific grid item along the block (vertical) axis within its grid cell. This property allows you to override the alignment specified by the parent container's align-items property for that particular item.
+    */
+    */
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
 
-        .item-4 {
-            /* grid-row: 1/2;
-            grid-column: pehla/t; */
-        }
-
-        .item-1 {
-            /* grid-row: 1/2; */
-            /* or you can do  */
-            /* grid-row-start: 1;
-            grid-row-end: 2; */
-
-            /* same thing */
-            /* grid-column: 1/2; */
-        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="item item-1">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item item-4">4</div>
-        <div class="item">5</div>
+        <div class="items item-1">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items item-4" >4</div>
+        <div class="items">5</div>
     </div>
 </body>
 
