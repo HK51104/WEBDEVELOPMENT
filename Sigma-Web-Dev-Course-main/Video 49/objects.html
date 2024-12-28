@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+    <style>
+        .container
+        {
+            width: 66px;
+            height: 88px ;
+            border: 2px solid black;
+            /* background-color: azure; */
+            background-image: url("https://i.pinimg.com/originals/86/7b/d7/867bd79cbbc94e906ab5030e90447508.jpg");
+            /* 
+            the problem with setting image as a backround image is if the image is smaller than the dimensions of background then the image will repeat itself therefore we use
+            background-repeat: no-repeat;
+                               repeat-x;(only repeat in x)            
+            */
+            /*
+             background-position: center center;
+             center position will be visible
+             */
+        }
+        img
+        {
+            /* 
+            object-fit: cover; 
+            covers the the mentioned width and height with perfect aspect ratio
+            mentioned in this case width : 66px and height : 88px
+            (some parts are cropped.)
+            object-position: top-right;(we can also mention the dimensions we want for eg 10px 20px)
+            this tells us in the case of cropping photo then top-right part will be visible
+            */
+            /* 
+            object-fit: contain; 
+            the image gets contained within the mentioned dimensions with the perfect asepect ratio
+            but it may leave empty space (padding) around the media.
+            ( No part of the media is cropped.)
+            */
+            /*
+            object-fit: fill;
+            default setting
+            image will fully cover the mentioned dimension even though image will become distorted           
+            */
+            /* 
+            object-fit: none; 
+            reset
+            */
+            width: 66px;
+            height: 88px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://i.pinimg.com/originals/86/7b/d7/867bd79cbbc94e906ab5030e90447508.jpg" alt=""> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Transform</title>
+    <style>
+        .container {
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid purple;
+        }
+        
+        .box {
+            height: 50px;
+            width: 50px;
+            background-color: beige;
+            border: 2px solid black;
+            /* 
+            transform: rotate(40deg);
+            rotation of the box by 40 degree
+            */
+            /*
+            transform: rotate(0.25turn); 
+            if 360 degree rotation = 1 turn then 0.25 turn = 90 degree turn 
+            */
+            /*
+            transform: rotateX(40deg); 
+            rotation about x axis
+            same for each axis
+            */
+            /* 
+            transform: scale(1.6); 
+            scales the object 1.6 times the original size
+            */
+            /* 
+            transform: scaleX(1.5); 
+            scales the object 1.5 times the original size in x-axis
+            */
+            /*
+            transform: scale3d();
+            used to scale 3 axis together
+            syntax:
+            transform: scale3d(sx, sy, sz);
+            */
+            /* 
+            transform: skew(5deg); 
+            The skew transformation in CSS is used to distort an element along the x-axis, y-axis, or both, creating a slanted or sheared appearance. It's like tilting the element by "pushing" one of its edges while keeping the opposite edge in place.
+            */
+            /* 
+            transform: translateX(34px); 
+            The translate transformation in CSS is used to move an element from its original position along the x-axis, y-axis, or both, without affecting the document's layout flow. It's like "shifting" the element while keeping its dimensions and other properties intact.
+            in this eg it will move 34 px in x axis
+            */
+            /*
+             transform: translateX(34%); 
+             it will move 34% of total size of box in x axis
+             */
+             /*
+              transform-origin: ; 
+              used to rotate the object about a point
+              */
+
+            
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            box
+        </div>
+    </div>
+</body>
+
+</html>

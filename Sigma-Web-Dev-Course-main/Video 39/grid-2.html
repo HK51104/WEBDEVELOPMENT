@@ -6,39 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Grid</title>
     <style>
-        .container {
+        .container
+        {
             border: 2px solid black;
             display: grid;
             grid-template-areas: "nav nav nav"
                 "side article article"
                 "footer footer footer";
+/*
+allowing you to assign specific names to areas of the grid.
+Each area is defined by a name enclosed in quotes. Empty spaces are represented by a dot (.)
+After defining the areas, you can then assign grid items to these areas using the grid-area property.
+*/
+/* 
+|   nav   |   nav   |   nav   |  <-- Row 1
+|  side   | article | article |  <-- Row 2
+| footer  | footer  | footer  |  <-- Row 3
+
+*/
         }
 
-        .item {
+        .item 
+        {
             border: 2px solid red;
             height: 55px;
         }
 
-        .item-1 {
+        .item-1 
+        {
             grid-area: nav;
             background-color: aqua;
         }
 
-        .item-2 {
+        .item-2 
+        {
             grid-area: side;
             background-color: beige;
         }
 
-        .item-3 {
+        .item-3 
+        {
             grid-area: article;
             background-color: azure;
         }
 
-        .item-4 {
+        .item-4 
+        {
             grid-area: footer;
         }
 
-        .item-5 {
+        .item-5 
+        {
             grid-area: nav;
         }
     </style>

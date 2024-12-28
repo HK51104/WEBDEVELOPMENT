@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Position Fix</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            height: 80px;
+            background-color: purple;
+            z-index: 1;
+        }
+
+        .main {
+            margin: 20px;
+            padding: 50px;
+            height: 700px;
+            background-color: darkgreen;
+        }
+
+        .first {
+            width: 600px;
+            height: 600px;
+            background-color: antiquewhite;
+            float: left;
+            margin: 30px;
+        }
+
+        .second {
+            width: 600px;
+            height: 600px;
+            background-color: blue;
+            float: left;
+            margin: 30px;
+        }
+
+        .svg-container {
+            top: 100px; /* Place it below the nav bar */
+            right: 10px; /* Position 10px from the right edge */
+            position: fixed; /* Fixed to the viewport */
+            z-index: 1000; /* Keep it on top of other elements */
+        }
+
+        .circle-style {
+            fill: orange;
+            stroke: black;
+            stroke-width: 5;
+        }
+    </style>
+</head>
+<body>
+    <nav></nav>
+    <div class="main">
+        <div class="first"></div>
+        <div class="second"></div>
+    </div>
+    <div class="svg-container">
+        <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="25" r="20" class="circle-style" />
+        </svg>
+    </div>
+</body>
+</html>

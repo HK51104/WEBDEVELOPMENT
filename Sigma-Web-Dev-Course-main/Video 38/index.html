@@ -15,20 +15,44 @@
             */
             height: 80vh;
             /* justify-content: center; */
+            /* 
+             horizontally(main axis) center the elements
+             */
             align-items: center;
+            /*  
+            vertically(cross axis) center the elements
+            */
             /* flex-direction: column; */
+            /*
+            we knew that at default the objetcs aligned left to right(row) but using "flex-direction: column;"
+            we set the default as top to bottom
+            */
+
+
             flex-wrap: wrap;
-            /* align-content: flex-start; */
-            /* there is no justify-items  in flexbox; */
+            /* 
+            wraps the content instead overflowing
+            */
+            /* align-content: center; */
+            /*
+            aligns number of rows to center
+            */
+
+
             flex-flow: row wrap;
-            /* gap: 30px; 
-            row-gap: 40px;
-            column-gap: 10px; */
+            /* 
+            syntax : flex-flow:<flex-direction> <flex-wrap>
+            The flex-flow property is a shorthand for setting both the flex-direction and flex-wrap properties in a single line. It controls the direction and wrapping behavior of flex items within a flex container.
+            */
             gap: 40px 10px;
+            /*  
+            row-gap: 40px;
+            column-gap: 10px; 
+            */
 
         }
 
-        .item {  
+        .item {
             /* flex-grow: 1; */
             height: 92px;
             width: 92px;
@@ -37,20 +61,39 @@
             background-color: blueviolet;
         }
 
-        .order-1{
+        /*
+        By default, flex items are laid out in the order they appear in the HTML source code, but the order property allows you to change this ordering without modifying the HTML. 
+        jitna zyada order utna baadme
+        jitna kam order utna pehla
+        */
+        .order-1 {
             order: 1;
         }
-        .order-2{
+
+        .order-2 {
             order: 2;
         }
-        .order-3{
+
+        .order-3 {
             order: 3;
         }
 
-        .item1{  
+        .item1 {
             /* flex-grow: 2; */
+            /* 
+            default value of every item in flex-grow is "0"
+            The flex-grow property in CSS defines how much a flex item will grow relative to the other flex items in the same flex container when there is extra space available.
+            */
             /* flex-shrink: 2; */
+            /* 
+            default value :1
+            The flex-shrink property in CSS controls how a flex item will shrink relative to the other flex items in a flex container when there isn’t enough space available.
+            */
             align-self: flex-end;
+            /* 
+            The align-self property in CSS is used to override the align-items property for a specific flex item within a flex container. It allows you to control the alignment of that individual flex item along the cross axis.
+            sabse hatke sirf apne aap ko align karna 
+            */
         }
     </style>
 </head>
@@ -70,8 +113,8 @@
             <div class="item"></div>
             <div class="item"></div>
             <div class="item"></div>
-            
-         
+
+
         </div>
     </main>
 

@@ -12,17 +12,83 @@
             background-color: red;
             border-radius: 70px;
             position: absolute;
+            /* When you set position: absolute on the .box, it positions the .box relative to the nearest positioned ancestor (an element with position set to relative, absolute, or fixed).
+            here the parent is container
+            This allows the box to remain confined within the container
+            */
+            /* 
+             If you used position: fixed for box, it would:
+             Be positioned relative to the entire viewport instead of container.
+             Stay in the same position on the screen even when the page or container is scrolled.
+            */
             bottom: 0;
-            left: 0; 
+            left: 0;
+            animation-name: BOUNCE;
+            animation-duration: 10s;
+            animation-play-state: running; 
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+            animation-fill-mode: forwards;
         }
 
         .container {
             position: relative;
+            /*
+             Setting position: relative on container ensures it becomes the reference point for any absolutely positioned child elements inside it (like box)
+             If you didn't set position: relative on .container, the .box would be positioned relative to the entire viewport (because the default containing block for absolutely positioned elements is the nearest positioned ancestor or, if none exists, the viewport).
+             */
             height: 80vh;
             width: 80vw;
             background-color: blue;
         }
- 
+    @keyframes BOUNCE 
+    /* 
+    from is equivalent to 0% (start of the animation).
+    to is equivalent to 100% (end of the animation).
+    Inside the braces {}, you define the CSS properties that will change at each step.
+    */
+    {
+        from
+        {
+            transform: translateX(0) translateY(0);
+        }
+        15%
+        {
+            transform: translateX(100px) translateY(-500px);
+            /* 
+            Positive values (translateY(30px)) move the element down.
+            Negative values (translateY(-30px)) move the element up. 
+            */ 
+        }
+        30%
+        {
+            transform: translateX(200px) translateY(0px);
+        }
+        45%
+        {
+            transform: translateX(300px) translateY(-400px);
+        }
+        60%
+        {
+            transform: translateX(400px) translateY(0);
+        }
+        75%
+        {
+            transform: translateX(500px) translateY(-300px);
+        }
+        90%
+        {
+            transform: translateX(600px) translateY(0);
+        }
+        99%
+        {
+            transform: translateX(700px) translateY(-150px);
+        }
+        to
+        {
+            transform: translateX(800px) translateY(0);
+        }
+    }
     </style>
 </head>
 
@@ -32,9 +98,6 @@
         <div class="box">
         </div>
     </div>
-    <!-- 
-   
-     -->
 </body>
 
 </html>

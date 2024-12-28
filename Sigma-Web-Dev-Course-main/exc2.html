@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            /* the top property with a value of 0, which is required for position: sticky to take effect.  */
+            /* When you set an element to position: sticky, it behaves like position: relative until a certain point, defined by the top, right, bottom, or left properties.
+            In our example, top: 0 tells the browser to make the element stick to the top of the viewport when it reaches that position as you scroll. */
+            z-index: 1;
+            /*  To keep the nav bar on top of other elements  */
+            /* This ensures that the nav bar is rendered above other content (useful if you have overlapping elements). The z-index places the nav bar on a higher "layer" than other elements, ensuring it stays visible. */
+            margin: 0 0 30px 0;
+            height: 80px;
+            background-color: purple;
+        }
+
+        .main {
+            margin: 20px;
+            padding: 50px;
+            height: 700px;
+            background-color: darkgreen;
+            display: flow-root;
+        }
+
+        .first {
+            width: 600px;
+            height: 600px;
+            background-color: antiquewhite;
+            float: left;
+            margin: 30px;
+        }
+
+        .second {
+            width: 600px;
+            height: 600px;
+            background-color: blue;
+            float: left;
+            margin: 30px;
+        }
+
+        .description {
+            padding: 50px 40px 20px 50px;
+            border: 5px solid gray;
+            border-radius: 50px;
+            margin: 5px 900px 0 250px;
+            font-size: 35px;
+            width: 900px;
+            height: 100px;
+        }
+
+        .svg-container {
+            top: 10px;
+            /* Position 10px from the top */
+            right: 10px;
+            /* Position 10px from the right edge */
+            position: fixed;
+            /* Fix the SVG relative to the viewport */
+            z-index: 1000;
+            /* Bring it to the top layer */
+            background-color: transparent;
+            /* Ensure no background blocks it */
+        }
+
+        /* .svg-container
+        {
+            right:10px;
+            top:10px;
+            /* left:90% ; */
+        /* position: fixed ; */
+        /*
+             Fixed positioning removes the element from the document flow and positions it relative to the viewport, not the parent element.
+            This means the element will stay in the same place on the screen even when scrolling.
+            Adding a large padding value shifts the SVG inside the fixed container.
+            It makes the position inconsistent because the padding is relative to the parent element's width, not the viewport.
+            While position: fixed makes an element stay relative to the viewport, using padding-left creates a spacing offset that interferes with this.
+            */
+        /* some stuff left here make it fixed */
+        /* } */
+        .circle-style {
+            fill: orange;
+            stroke: black;
+            stroke-width: 5;
+            margin-left: 10px;
+
+        }
+
+        /* Add some styling for the SVG container */
+    </style>
+</head>
+
+<body>
+    <nav></nav>
+    <div class="main">
+        <div class="first"></div>
+        <div class="second"></div>
+    </div>
+    <div class="svg-container">
+        <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+            <!-- 
+            width="200" and height="200": These attributes set the overall size of the SVG canvas to 200 pixels wide and 200 pixels tall.
+            xmlns="http://www.w3.org/2000/svg": This attribute specifies the XML namespace for SVG, ensuring that the browser interprets this as SVG content.
+            -->
+            <circle cx="25" cy="25" r="20" fill="orange" class="circle-style" />
+            <!-- 
+            This tag draws a circle inside the SVG. 
+            cx="100" and cy="100": These attributes set the center of the circle. cx is the x-coordinate, and cy is the y-coordinate. Both are set to 100, placing the center of the circle at the middle of the 200x200 canvas.
+            r="80": This attribute defines the radius of the circle as 80 pixels.
+            fill="yellow": This attribute sets the color of the circle to yellow.
+            class="circle-style" specifies the class for the svg
+            -->
+        </svg>
+    </div>
+    <div class="description">
+        WELCOME TO SIGMA WEB DEVELOPMENT EXPRESS!
+    </div>
+
+
+</body>
+
+</html>

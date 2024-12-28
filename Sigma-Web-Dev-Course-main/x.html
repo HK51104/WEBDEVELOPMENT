@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lists</title>
+    <style>
+        nav ul li
+        /* 
+        "nav" ke andar jo "ul" hai uske andar jo "li" hai 
+        */
+        {
+            list-style: devanagari;
+            list-style-type: "🔥";
+            /* 
+            /* 
+            in place of marker if we want some emoji then we can use "list-style-type:(image of the emoji)"
+            */
+            /* background-color: yellow; */
+            /* 
+            when background color is given without using the "list-style-position" property the marker (.) wasnt given any background color(also applicable for borders and all)
+            */
+            /* list-style-position: inside; */
+            /* 
+            using "list-style-position:inside " gives the marker also background color
+            */
+            border: 2px solid black;
+            /* list-style:circle inside  */
+            /*
+            tells us about the "marker"
+            to be used for the list (in this case : circle)
+            */
+            /* list-style-image: url("https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif"); */
+            /* 
+            in place of marker if we want some image then we can use "list-style-image:(url of the image)"
+             */
+        }
+ 
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>

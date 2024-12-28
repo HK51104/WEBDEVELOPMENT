@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltraEdit</title>
+    <style>
+        nav {
+            display: flex;
+            /* This makes the nav container a flex container */
+            font-size: 18px;
+            /* Set font size for text inside nav */
+            justify-content: space-between;
+            /* Distribute space between logo and text */
+            flex-wrap: wrap;
+            align-items: center;
+            /* Align items vertically in the center */
+        }
+
+        .nav {
+            display: flex;
+            /* Display the items inside the .nav as flex items */
+            gap: 80px;
+            /* Add equal space between each text item */
+            align-items: center;
+            /* Ensure all items (including image) are vertically centered */
+            margin-right: 200px;
+        }
+
+        .nav img {
+            vertical-align: middle;
+            /* Align the image in the middle with text */
+        }
+        .text
+        {
+            flex-direction: column;
+            /* This tells the flex container to arrange its children (the .h1 and .h2 divs) in a vertical direction (one column). */
+            display:flex;
+            justify-content: center;
+            /* main axis center */
+            align-items: center;
+            /* cross axis center */
+
+        }
+
+        .h1 {
+
+            font-size: 50px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .h2
+        {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        .download
+        {
+            border-radius:5px ;
+            padding: 10px;
+            color: white;
+            border: 1px;
+            background-color: rgba(0, 183, 255, 0.814);
+            margin-bottom: 100px;
+        }
+        .h3
+        {
+            padding-right:200px ;
+            font-size: 20px;
+        }
+        .stickers
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            
+        }
+        .english
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px 50px 0px 200px;
+            border: 2px solid red;
+            height: 400px;
+            width: 200px;
+            background-color: lightgray
+        }
+        .spanish
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px 50px 0px 200px;
+            border: 2px solid red;
+            height: 400px;
+            width: 200px;
+            border-radius: 2px;
+            background-color: lightgray
+        }
+        .japanese
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px 50px 0px 200px;
+            border: 2px solid red;
+            height: 400px;
+            width: 200px;
+            border-radius: 2px;
+            background-color: lightgray
+        }
+        .greek
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px 50px 0px 200px;
+            border: 2px solid red;
+            height: 400px;
+            width: 200px;
+            border-radius: 2px;
+            background-color: lightgray
+        }
+        .urdu
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px 50px 0px 200px;
+            border: 2px solid red;
+            height: 400px;
+            width: 200px;
+            border-radius: 2px;
+            background-color: lightgray
+        }
+        .french
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px 50px 0px 200px;
+            border: 2px solid red;
+            height: 400px;
+            width: 200px;
+            border-radius: 2px;
+            background-color: lightgray
+        }
+        /*
+        wherever same properties needs to be use for variosu instances then use root variable
+        */
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="ultraedit.png" alt="LOGO">
+        <div class="nav">
+            <div>Products</div>
+            <div>For business</div>
+            <div>Resources</div>
+            <div>Support</div>
+            <div>
+                Our Company
+                <img src="image.png" alt="image">
+            </div>
+        </div>
+        <!-- we need to add image in the same folder in order to use it within the same folder for different file -->
+    </nav>
+    <div class="text">
+        <div class="h1">
+            Download <strong>UltraEdit</strong> for Windows <img src="rating.png" alt="rating">
+        </div>
+        <div class="h2">
+            Download and try UltraEdit before you buy it! This download includes the full Windows
+        </div>
+        <div class="h2">
+            version of the text editor.
+        </div>
+        <div class="download">
+            DOWNLOAD MAC OR LINUX VERSION
+        </div>
+        <div class="h3">
+        <img src="ultraedit.png" alt="LOGO"> Download UltraEdit v2024.1 (released 2024-09-30) | Hotfix information
+        <div>
+            <div class="stickers">
+                <div class="english">
+                    <strong>English</strong>
+                </div>
+                <div class="spanish">
+                    <strong>Spanish</strong>
+                </div>
+                <div class="japanese">
+                    <strong>Japanese</strong>
+                </div>
+                
+                <div class="french">
+                    <strong>French</strong>
+                </div>
+                <div class="greek">
+                    <strong>Greek</strong>
+                </div>
+                <div class="urdu">
+                    <strong>Urdu</strong>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>
